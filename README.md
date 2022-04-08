@@ -1,8 +1,8 @@
 ### Quiz Rest API
 ### Author: Ranjith
 
-### Run Following coment 
-Get the app
+### Run Following commands 
+Cone the app using the below command
 ```
 git clone https://github.com/ranjithshivasami/quiz-api.git quiz-api
 ```
