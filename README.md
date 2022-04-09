@@ -15,4 +15,4 @@ php artisan db:seed
 
 Download below postman collection to test this API
 
-[Quiz Api Postman Collection](https://github.com/ranjithshivasami/quiz-api/postman/QuizApi.postman_collection.json)
+[Quiz Api Postman Collection](https://github.com/ranjithshivasami/quiz-api/blob/main/postman/QuizApi.postman_collection.json)
