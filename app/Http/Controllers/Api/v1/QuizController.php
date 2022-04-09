@@ -100,6 +100,6 @@ class QuizController extends Controller
     {
         $totalAnsweredCount =  DB::table('participant_answers')->count();
         $percentage = $asnwers / $totalAnsweredCount * 100;
-        return $percentage;
+        return round($percentage, 2);
     }
 }
