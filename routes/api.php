@@ -14,7 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-Route::get('/get-question', 'QuizController@index')->name('questions');
+
+Route::prefix('v1')->group(function(){
+    Route::get('/quiz-question', 'Api\v1\QuizController@index')->name('questions');
+    Route::get('/participants-answers', 'Api\v1\QuizController@getParticipantsAnswers')->name('participants-answers');
+    Route::post('/create-participant', 'Api\v1\QuizController@createParticipant')->name('create-participant');
+    Route::post('/store-participants-answer', 'Api\v1\QuizController@storeParticipantAnswer')->name('store-participants-answer');
+});
+
+Route::fallback(function(){
+    return response()->json([
+        'message' => 'Not found'
+    ]);
+});
